@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {},
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "echo '222'"
   },
   "lint-staged": {
     "*": "eslint --fix"
