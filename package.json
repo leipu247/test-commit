@@ -13,9 +13,6 @@
     "@commitlint/config-conventional": "8.3.4",
     "simple-git-hooks": "^2.11.1"
   },
-  "lint-staged": {
-    "*": "eslint --fix"
-  },
   "simple-git-hooks": {
     "commit-msg": "npx --no -- commitlint --edit \"$1\""
   }
