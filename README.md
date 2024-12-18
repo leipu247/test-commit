@@ -1,4 +1,4 @@
-# 如果你只是协作者你什么都不用做，下次提交的时候就会校验
+# 如果你只是协作者你只需要 npm install，下次提交的时候就会校验
 
 # 初次集成
 
@@ -29,6 +29,10 @@ package.json文件
 
 {
   ...
+  "scripts": {
+    ...
+    "postinstall": "npx simple-git-hooks"
+  },
   "simple-git-hooks": {
     "commit-msg": "npx --no -- commitlint --edit \"$1\""
   }
