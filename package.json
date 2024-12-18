@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:fix": "eslint --fix"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
-    "husky": "^7.0.4"
+    "husky": "^7.0.4",
+    "eslint": "^9.13.0",
+    "eslint-plugin-format": "^0.1.2"
   }
 }
