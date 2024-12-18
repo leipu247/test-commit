@@ -9,18 +9,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
-    "eslint": "6.1.0",
-    "eslint-plugin-vue": "6.2.2",
-    "lint-staged": "10.5.4",
+    "@commitlint/cli": "8.3.4",
+    "@commitlint/config-conventional": "8.3.4",
     "simple-git-hooks": "^2.11.1"
   },
   "lint-staged": {
     "*": "eslint --fix"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged",
-    "commit-msg": "commitlint"
+    "commit-msg": "npx --no -- commitlint --edit \"$1\""
   }
 }
