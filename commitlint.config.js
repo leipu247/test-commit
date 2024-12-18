@@ -1,27 +1,13 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
-  prompt: {
-    questions: {
-      type: {
-        description: '选择你要提交的类型:',
-        enum: {
-          feat: {
-            description: '新功能',
-            title: 'Features',
-            emoji: '✨'
-          },
-          fix: {
-            description: '修复相关bug',
-            title: 'Bug Fixes',
-            emoji: '🐛'
-          },
-          docs: {
-            description: '文档更改',
-            title: 'Documentation',
-            emoji: '📚'
-          }
-        }
-      }
-    }
+  rules: {
+    'type-enum': [2, 'always', ['build', 'ci', 'docs', 'feat', 'fix', 'perf', 'refactor', 'style', 'test', 'revert', 'chore']],
+    'type-case': [0],
+    'type-empty': [0],
+    'scope-empty': [0],
+    'scope-case': [0],
+    'subject-full-stop': [0, 'never'],
+    'subject-case': [0, 'never'],
+    'header-max-length': [0, 'always', 72]
   }
 }
